@@ -2,22 +2,20 @@ from django.db import models
 
 # Create your models here.
 
-class Curso(models.Model):
+class Productos(models.Model):
+
+    nombreProd = models.CharField(max_length=40)
+    precio = models.IntegerField()
+    
+class Clientes(models.Model):
 
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=40)
-    camada = models.IntegerField()
+    codCliente = models.IntegerField()
     email = models.EmailField()
-
-class Profesores(models.Model):
+    
+class Vendedores(models.Model):
 
     nombre = models.CharField(max_length=40)
     apellido = models.CharField(max_length=40)
-    email = models.EmailField()
-    profesion = models.CharField(max_length=40)
-
-class Estudiantes(models.Model):
-
-    nombre = models.CharField(max_length=40)
-    apellido = models.CharField(max_length=40)
-    email = models.EmailField()
+    jerarquia = models.CharField(max_length=30)
