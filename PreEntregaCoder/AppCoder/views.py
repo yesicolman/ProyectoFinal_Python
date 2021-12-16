@@ -6,3 +6,8 @@ from django.http import HttpResponse
 def inicio(request):
 
     return render(request, 'AppCoder/inicio.html')
+
+
+def Productos(request):
+
+    return render(request, 'AppCoder/Productos.html')
